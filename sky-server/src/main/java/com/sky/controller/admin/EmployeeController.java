@@ -47,7 +47,9 @@ public class EmployeeController {
         Map<String, Object> claims = new HashMap<>();
         claims.put(JwtClaimsConstant.EMP_ID, employee.getId());
         String token = JwtUtil.createJWT(
+                // 传入 Key
                 jwtProperties.getAdminSecretKey(),
+                // 传入过期时间
                 jwtProperties.getAdminTtl(),
                 claims);
 
