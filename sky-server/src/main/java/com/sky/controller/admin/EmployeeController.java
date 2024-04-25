@@ -1,6 +1,7 @@
 package com.sky.controller.admin;
 
 import com.sky.constant.JwtClaimsConstant;
+import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
 import com.sky.entity.Employee;
 import com.sky.properties.JwtProperties;
@@ -78,4 +79,18 @@ public class EmployeeController {
         return Result.success();
     }
 
+    /**
+     * 新增员工
+     *
+     * @return
+     */
+    // 这里由于请求路径是 /admin/employee，所以这里就不用写路径了
+    @PostMapping
+    @ApiOperation(value = "新增员工")
+    public Result save(@RequestBody EmployeeDTO employeeDTO) {
+        log.info("新增员工:{}",employeeDTO);
+        employeeService.save(employeeDTO);
+        // 定义了三种 success 方法， 分别对应后端返回的三种情况
+        return Result.success();
+    }
 }

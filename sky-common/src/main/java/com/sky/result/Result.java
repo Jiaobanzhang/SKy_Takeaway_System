@@ -9,6 +9,7 @@ import java.io.Serializable;
  * @param <T>
  */
 @Data
+// Result<T>是一个泛型类的声明
 public class Result<T> implements Serializable {
 
     private Integer code; //编码：1成功，0和其它数字为失败
