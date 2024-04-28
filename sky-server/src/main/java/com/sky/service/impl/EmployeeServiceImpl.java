@@ -143,4 +143,20 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setPassword("****");
         return employee;
     }
+
+    /**
+     * 编辑员工信息
+     * @param employeeDTO
+     */
+    @Override
+    public void update(EmployeeDTO employeeDTO) {
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDTO,employee);
+
+        // 更改一下更新时间和更新用户，这里更新用户是通过 threadLocal 进行存储的
+        employee.setUpdateTime(LocalDateTime.now());
+        employee.setUpdateUser(BaseContext.getCurrentId());
+
+        employeeMapper.update(employee);
+    }
 }
