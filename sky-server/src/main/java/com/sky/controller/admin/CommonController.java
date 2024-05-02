@@ -49,6 +49,7 @@ public class CommonController {
             log.error("文件上传失败：{}", e);
         }
 
+        // 上传失败的话，返回错误信息，通过常量的信息进行返回
         return Result.error(MessageConstant.UPLOAD_FAILED);
     }
 }

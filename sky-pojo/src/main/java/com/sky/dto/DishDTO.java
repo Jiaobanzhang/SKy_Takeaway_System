@@ -23,7 +23,7 @@ public class DishDTO implements Serializable {
     private String description;
     //0 停售 1 起售
     private Integer status;
-    //口味
+    //口味 封装了 DishFlovor 类型中的数据
     private List<DishFlavor> flavors = new ArrayList<>();
 
 }
