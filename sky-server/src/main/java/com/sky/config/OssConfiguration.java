@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @autor: 我亦无他，唯手熟尔
+ * 用来创建 Ali 云操作工具对象
  */
 
 @Configuration
