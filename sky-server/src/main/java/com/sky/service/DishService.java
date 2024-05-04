@@ -5,6 +5,8 @@ import com.sky.dto.DishPageQueryDTO;
 import com.sky.result.PageResult;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @autor: 我亦无他，唯手熟尔
  * 新增菜品接口
@@ -23,4 +25,10 @@ public interface DishService {
      * @return
      */
     PageResult pageQuery(DishPageQueryDTO dishPageQueryDTO);
+
+    /**
+     * 菜品批量删除功能
+     * @param ids
+     */
+    void deleteBatch(List<Long> ids);
 }
