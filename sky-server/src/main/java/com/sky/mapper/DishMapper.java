@@ -59,4 +59,12 @@ public interface DishMapper {
      */
 //    delete from dish where id in {1,2,3,4}
     void deleteByIds(List<Long> ids);
+
+    /**
+     * 根据id动态修改菜品数据
+     *
+     * @param dish
+     */
+    @AutoFill(value = OperationType.UPDATE)
+    void update(Dish dish);
 }
