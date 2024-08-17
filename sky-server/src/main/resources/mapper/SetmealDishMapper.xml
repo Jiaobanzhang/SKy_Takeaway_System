@@ -8,4 +8,20 @@
             #{dishId}
         </foreach>
     </select>
+    <insert id="insert" parameterType="Setmeal" useGeneratedKeys="true" keyProperty="id">
+        insert into setmeal
+        (category_id, name, price, status, description, image, create_time, update_time, create_user, update_user)
+        values (#{categoryId}, #{name}, #{price}, #{status}, #{description}, #{image}, #{createTime}, #{updateTime},
+                #{createUser}, #{updateUser})
+    </insert>
+<!--    每次循环时，集合setmealDishes中的一个元素都会被赋值给变量sd。在<foreach>标签的循环体内，你可以通过#{sd.属性名}的方式来访问当前元素（即sd）的属性。例如，#{sd.setmealId}会访问当前setmealDishes集合中元素的setmealId属性。-->
+<!--    separator=","确保了每次循环生成的记录对（例如(#{sd.setmealId},#{sd.dishId},#{sd.name},#{sd.price},#{sd.copies})）都会被逗号分隔开-->
+    <insert id="insertBatch" parameterType="list">
+        insert into setmeal_dish
+        (setmeal_id,dish_id,name,price,copies)
+        values
+        <foreach collection="setmealDishes" item="sd" separator=",">
+            (#{sd.setmealId},#{sd.dishId},#{sd.name},#{sd.price},#{sd.copies})
+        </foreach>
+    </insert>
 </mapper>
