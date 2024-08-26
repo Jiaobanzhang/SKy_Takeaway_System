@@ -15,14 +15,16 @@
    
   (1) Swagger: 用于生成接口文档, 可以进行后端的接口测试
   
-  (2) JWT:
+  (2) JWT: JWT 令牌技术, 使用 JwtUtil 工具类可以用来生成和解析令牌, 一种能够生成 token 和解析 token 的技术
   
-  (3) 阿里云:
+  (3) 阿里云OSS: 该项目使用了阿里云OSS服务用来存储照片, 将项目中的照片存储在云端, 所有的用户都可以进行访问
   
-  (4) httpClient:
+  (4) httpClient: Java 用于发送 http 请求的技术, http 请求不光可以在前端进行发送, 在 java 中同样可以使用 httpclient 进行发送
   
-  (5) Spring Cache:
-  
+  (5) Spring Cache: 其实和 Spring data cache 的作用差不多, 都是java操作redis的一种手段, 只不过 springCache 是通过注解来实现redis缓存功能:
+
+  <img width="922" alt="截屏2024-08-26 02 15 50" src="https://github.com/user-attachments/assets/9ff428dd-88eb-478a-9150-4fa80823e3d6">
+
 
 3. 数据层:
 
