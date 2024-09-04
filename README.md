@@ -23,7 +23,9 @@
   
   (5) Spring Cache: 其实和 Spring data cache 的作用差不多, 都是java操作redis的一种手段, 只不过 springCache 是通过注解来实现redis缓存功能:
   
-  (6) Spring Task 是Spring框架提供的任务调度工具，可以按照约定的时间自动执行某个代码逻辑。定时自动执行某段Java代码
+  (6) Spring Task 是Spring框架提供的任务调度工具，可以按照约定的时间自动执行某个代码逻辑。定时自动执行某段Java代码 (每月还款提醒, 类似定的闹钟)
+
+  (7) WebSocket 是基于 TCP 的一种新的**网络协议**。它实现了浏览器与服务器全双工通信——浏览器和服务器只需要完成一次握手，两者之间就可以创建**持久性**的连接， 并进行**双向**数据传输。
 
   <img width="922" alt="截屏2024-08-26 02 15 50" src="https://github.com/user-attachments/assets/9ff428dd-88eb-478a-9150-4fa80823e3d6">
 
