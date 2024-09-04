@@ -22,6 +22,8 @@
   (4) httpClient: Java 用于发送 http 请求的技术, http 请求不光可以在前端进行发送, 在 java 中同样可以使用 httpclient 进行发送
   
   (5) Spring Cache: 其实和 Spring data cache 的作用差不多, 都是java操作redis的一种手段, 只不过 springCache 是通过注解来实现redis缓存功能:
+  
+  (6) Spring Task 是Spring框架提供的任务调度工具，可以按照约定的时间自动执行某个代码逻辑。定时自动执行某段Java代码
 
   <img width="922" alt="截屏2024-08-26 02 15 50" src="https://github.com/user-attachments/assets/9ff428dd-88eb-478a-9150-4fa80823e3d6">
 
